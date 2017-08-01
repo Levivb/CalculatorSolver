@@ -1,4 +1,4 @@
-# Levivb's Calculator: The Game Solver
+# Calculator: The Game Solver
 
 ## What is it?
 A script to find the solutions of the puzzles in "Calculator: The Game"
@@ -16,8 +16,8 @@ The biggest challenge was due to the "save button"... Not only had I keep track 
 ## What is it not?
 A well written, bugfree, input sanitized, world hunger solution generator...
 Seriously, it's hurdled with bugs, but as my challenge completed after finishing every single puzzle in the game solely by using this script, my job was done.
-Negative numbers will mess up the script sometimes and the portals near the end of the game are not very well tested. I fixed what I encounted, but no doubt not all crashes are fixed.
-Also... I clearly don't understand the scoping in python as I couldn't get the code in `libs/functions.py` to work while importing it in `__init__.py`. Didn't bother yet to look into it yet.
+Negative numbers will mess up the script sometimes and the portals near the end of the game are not very well tested. I fixed what I encountered, but no doubt not all crashes are fixed.
+Also... I clearly don't understand the scoping in python as I couldn't get the code in `libs/functions.py` to work while importing it in `__init__.py`. Didn't bother to look into it yet.
 
 ## Requirements
 * python3: brew install python3.<br>
@@ -33,8 +33,8 @@ Also... I clearly don't understand the scoping in python as I couldn't get the c
 
 The solver consists of three main input parts:
 1. The game: here you define the game parameters: start, goal, moves, portals and whether to show all solutions or break on first hit. Logically breaking on first hit is the fastest, but it's interesting to see the amount of solutions are possible even for puzzles with only 4 moves and 3 buttons.
-1. The main menu: here you can choose whether you want to add a button (0), start solving (1) or exit (2)
-1. The button menu: When choosing `0` in the main menu you'll be shown a list of possible buttons. Choose the number of the button you want to add and enter the required value if needed.
+1. The main menu: here you can choose whether you want to add a button (0), start solving (1) or exit (2).
+1. The button menu: When choosing to add a button in the main menu you'll be shown a list of possible buttons. Choose the number of the button you want to add and enter the required value if needed.
 
 ## Disclaimer
 I'm by no means very knowledgeable in python. I merily threw this piece of software together in 2 holiday days in order to understand python a bit more. I tried to keep responsibilities seperate and the code as dynamic as possible. Hence the string to class generation in `solver.py`, but I failed to get the automated imports of the actions classes in `solver.py` to work while also keeping the string to class generation functional. Mainly because I've no idea in which scope the dynamically imported modules end up and how to retrieve them.
